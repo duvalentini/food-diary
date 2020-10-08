@@ -10,10 +10,10 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { square, map, images } from 'ionicons/icons';
+import { reader, map, images } from 'ionicons/icons';
 import RestaurantMap from './pages/RestaurantMap';
 import PhotoGallery from './pages/PhotoGallery';
-import Tab3 from './pages/Tab3';
+import Notes from './pages/Notes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,7 +41,7 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/map" component={RestaurantMap} exact={true} />
           <Route path="/photos" component={PhotoGallery} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/notes" component={Notes} />
           <Route path="/" render={() => <Redirect to="/map" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -53,9 +53,9 @@ const App: React.FC = () => (
             <IonIcon icon={images} />
             <IonLabel>Photos</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="tab3" href="/notes">
+            <IonIcon icon={reader} />
+            <IonLabel>Notes</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

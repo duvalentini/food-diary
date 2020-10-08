@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import Map from '../components/Map';
-import './Tab1.css';
+import './RestaurantMap.css';
 
 const RestaurantMap: React.FC = () => {
   return (
