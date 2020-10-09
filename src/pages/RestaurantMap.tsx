@@ -5,6 +5,7 @@ import './RestaurantMap.css';
 
 const RestaurantMap: React.FC = () => {
   const [searchText, setSearchText] = useState('');
+  const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
   return (
     <IonPage>
@@ -15,7 +16,7 @@ const RestaurantMap: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <Map
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZKVouHcislNWAP-dRA1CD0bn0ruq_3I&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&v=3.exp&libraries=geometry,drawing,places`}
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `80vh` }} />}
           mapElement={<div style={{ height: `100%` }} />}

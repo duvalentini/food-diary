@@ -3,7 +3,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 
 const Map: React.FC<{searchText:string}> = ({searchText}) => {
 
-  const [ currentPosition, setCurrentPosition ] = useState({lat: '', lng: ''});
+  const [ currentPosition, setCurrentPosition ] = useState({lat: 0.0, lng: 0.0});
   // const [ places, setPlaces ] = useState([]);
   // const refs = {
   //   map: React.createRef<GoogleMap>(),
@@ -49,12 +49,7 @@ const Map: React.FC<{searchText:string}> = ({searchText}) => {
       // onTilesLoaded={fetchPlaces}
       // onBoundsChanged={fetchPlaces}
     >
-    {
-      currentPosition.lat &&
-      (
-        <Marker position={currentPosition} />
-      )
-    }
+      <Marker position={currentPosition} />
     </GoogleMap>
   );
 };

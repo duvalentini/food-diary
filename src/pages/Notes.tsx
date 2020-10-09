@@ -34,6 +34,8 @@ const Notes: React.FC = () => {
         <IonList>
         <>
         {
+          notes.length
+          ?
           notes.map((note, index) => (
             <IonItemSliding>
               <IonItem>
@@ -44,6 +46,10 @@ const Notes: React.FC = () => {
               </IonItemOptions>
             </IonItemSliding>
           ))
+          :
+          <IonItem>
+            <IonLabel>No notes added yet...</IonLabel>
+          </IonItem>
         }
         </>
           <IonItemDivider />
